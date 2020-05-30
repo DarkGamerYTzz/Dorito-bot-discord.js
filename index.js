@@ -19,12 +19,12 @@ client.categories = fs.readdirSync("./commands/");
 client.on("ready", () => {
     console.log(`Hi, ${client.user.username} is now online!`);
     
-client.user.setActivity('-help', { type: 'WATCHING' });
+client.user.setActivity('$help', { type: 'WATCHING' });
 
 });
 
 client.on("message", async message => {
-    const prefix = "-";
+    const prefix = "$";
 
     if (message.author.bot) return;
     if (!message.guild) return;
